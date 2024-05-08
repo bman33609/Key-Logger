@@ -17,18 +17,8 @@
 <h2>Objectives:</h2>
 
 - <b>Create a Python program that records all keyboard input</b> 
-- <b>Ensure the program sends all keyboard input to the .txt file</b> 
+- <b>Ensure the program sends all keyboard input to a .txt file</b> 
 
 
 
 
-
-<!--
- ```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
---!>
